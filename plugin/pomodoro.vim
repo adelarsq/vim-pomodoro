@@ -32,7 +32,10 @@ set cpo&vim
 
 command! -nargs=* PomodoroStart call s:PomodoroStart(<q-args>)
 command! PomodoroStatus echo PomodoroStatus()
-nmap <F7> <ESC>:PomodoroStart<CR>
+
+if !exists("g:no_plugin_maps") || g:no_plugin_maps == 0
+    nmap <F7> <ESC>:PomodoroStart<CR>
+endif
 
 function! PomodoroStatus()
     if g:pomodoro_started == 0
