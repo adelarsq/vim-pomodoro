@@ -2,7 +2,7 @@
 " Author:   Maximilian Nickel <max@inmachina.com>
 " License:  MIT License
 
-if exists("g:loaded_autoload_pomodorocommands") || &cp || !has('clientserver')
+if exists("g:loaded_autoload_pomodorocommands") || &cp
     " requires nocompatible and clientserver
     " also, don't double load
     finish
