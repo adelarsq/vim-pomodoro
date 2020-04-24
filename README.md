@@ -1,15 +1,14 @@
-Vim-pomodoro
-============
+# Vim-pomodoro 🍅
 
-vim-pomodoro is a [Vim](http://www.vim.org) plugin for the [Pomodoro time management technique](http://www.pomodorotechnique.com/).
+`vim-pomodoro` is a [Vim](http://www.vim.org) plugin for the [Pomodoro time management technique](http://www.pomodorotechnique.com/).
 This is a fork that mitigate some issues with the [original plugin](https://github.com/mnick/vim-pomodoro).
 
 It requires Vim 8/Neovim.
 
 This implementation use the new Vim 8/Neovim timers.
 
-Usage
------
+## Usage
+
 The usage of vim-pomodoro is simple. `:PomodoroStart [pomodoro_name]` starts a new pomodoro.
 The parameter `pomodoro_name` is optional. After a pomodoro has ended, a confirmation dialog will
 remind you to take a break. When the break has ended, another dialog will ask you if you want
@@ -23,8 +22,8 @@ popup notification windows in Vim.
 Also, in addition to the default notifications inside vim, vim-pomodoro allows you to add
 further external notifications, such as sounds, system-notification popups etc.
 
-Configuration
--------------
+## Configuration
+
 Add the following options to your `~/.vimrc` to configure vim-pomodoro
 
 	" Duration of a pomodoro in minutes (default: 25)
@@ -46,6 +45,7 @@ To display the remaining time of a pomodoro in your statusline, add
 to your `~/.vimrc`
 
 ### Bells and Whistles
+
 Notifications outside vim can be enabled through the option `g:pomodoro_notification_cmd`.
 For instance, to play a soundfile after each completed pomodoro or break, add something like
 
@@ -56,11 +56,15 @@ the option
 
 	let g:pomodoro_notification_cmd = 'zenity --notification --text="Pomodoro finished"''
 
-Installation
-------------
-vim-pomodoro requires Vim 8/Neovim.
-The recommended installation method for both plugins is via [Vundle](https://github.com/gmarik/vundle).
-Add
+## Installation
+
+`vim-pomodoro` requires Vim 8/Neovim.
+
+The recommended installation method for this plugin is via [vim-plug](https://github.com/junegunn/vim-plug):
+
+	Plug 'adelarsq/vim-pomodoro'
+
+You can also use [Vundle](https://github.com/gmarik/vundle):
 
 	Bundle 'adelarsq/vim-pomodoro'
 
