@@ -40,21 +40,21 @@ endif
 
 function! PomodoroStatus()
     if g:pomodoro_started == 0
-        silent! if emoji#available()
+        silent! if exists('g:vim_pomodoro_icon')
             " inative just show symbol
-            return emoji#for('tomato')
+            return g:vim_pomodoro_icon
         else
             return "Pomodoro inactive"
         endif
 	elseif g:pomodoro_started == 1
-        silent! if emoji#available()
-		    return emoji#for('tomato') . " started (remaining: " . pomodorocommands#remaining_time() . " minutes)"
+        silent! if exists('g:vim_pomodoro_icon')
+		    return g:vim_pomodoro_icon . " started (remaining: " . pomodorocommands#remaining_time() . " minutes)"
         else
             return "Pomodoro started (remaining: " . pomodorocommands#remaining_time() . " minutes)"
         endif
 	elseif g:pomodoro_started == 2
-        silent! if emoji#available()
-            return emoji#for('tomato') . " break started"
+        silent! if exists('g:vim_pomodoro_icon_break')
+            return g:vim_pomodoro_icon_break . " break started"
         else
 		    return "Pomodoro break started"
         endif

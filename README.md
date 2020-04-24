@@ -2,7 +2,7 @@ Vim-pomodoro
 ============
 
 vim-pomodoro is a [Vim](http://www.vim.org) plugin for the [Pomodoro time management technique](http://www.pomodorotechnique.com/).
-This is a fork that mitigate some issues with the [original plugin](https://github.com/adelarsq/vim-pomodoro).
+This is a fork that mitigate some issues with the [original plugin](https://github.com/mnick/vim-pomodoro).
 
 It requires Vim 8/Neovim.
 
